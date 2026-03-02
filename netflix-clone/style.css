@@ -1,0 +1,506 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    scroll-behavior: smooth;
+}
+
+* a{
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+}
+
+.mainNetflixContainer{
+    /* border: 2px solid red ; */
+    /* padding: 0rem 2rem; */
+    height: 80%;
+}
+
+.backgroundContainer{
+    background-image: url(bannerImage.jpg);
+    filter: blur(16px);
+    height: 100vh;
+    position: relative;
+}
+
+.pinkOverlay{
+    height: 80%;
+    width: 100%;
+    background-color: rgba(104, 3, 20, 0.404);
+}
+
+.contentContainer{
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+    padding: 0rem 2rem;
+}
+
+nav{
+    /* border: 2px solid green ; */
+    height: 20vh;
+    position: fixed;
+    z-index: 1000;
+}
+
+.upperNavbarSection{
+    /* border: 2px solid blue; */
+    display: flex;
+}
+
+.upperNavbarLeftSection{
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 50%;
+}
+
+.netflixLogo{
+    width: 29%;
+}
+
+.upperNavbarRightSection{
+    /* border: 2px solid green; */
+    width: 50%;
+    /* height: 50%; */
+}
+
+.navBarButtonContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.languageButton{
+    display: flexbox;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.235);
+    outline: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.signInButton{
+    background-color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    /* outline: none; */
+    color: black;
+    margin-left: 10px;
+    margin-right: 50px;
+    font-size: 1rem;
+}
+
+.languageButton p{
+    margin-left: 5px;
+}
+
+
+.lowerNavbarSection{
+    /* border: 2px solid red; */
+    height: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.menuList{
+    /* border: 2px solid green; */
+    width : 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    background: rgba(0,0,0,.7);
+    box-shadow: 2px 3px 14px rgba(0,0,0,.5);
+    backdrop-filter: blur(7px);
+    height: 7vh;
+}
+
+.menuList li{
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sectionsContainer{
+    margin-top: 20vh;
+}
+
+.bannerSection{
+    /* border: 2px solid red; */
+    height: 90vh;
+    background-image: url(bannerImage.jpg);
+    background-size: 100% 100%;
+    border-radius: 20px;
+    /* margin-top: 2rem; */
+    position: relative;
+    /* border: 1px solid rgba(49, 45, 45, 0.319); */
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,.3) ,  rgba(0,0,0,.7) , black);
+    border-radius: 20px;
+}
+
+
+.bannerContainer{
+    /* border: 2px solid red ; */
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bannerContainer h2{
+    font-size: 4rem;
+    /* border: 2px solid green ; */
+    width: 50%;
+    text-align: center;
+}
+
+.bannerContainer h4{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.bannerContainer p{
+    font-size: 1rem;
+    margin: 20px;
+}
+
+.inputContainer{
+    /* border: 2px solid green; */
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.emailInputBox{
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255,.5);
+    padding-right: 20px;
+    width: 60%;
+    color: white;
+    font-size: 1rem;
+}
+
+.emailInputBox::placeholder{
+    color: white;
+}
+
+.getStartedButton{
+    /* border: 2px solid green; */
+    width: 30%;
+    /* height: 100%; */
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.carouselSection,
+.planSection,
+.reasonToJoinSection,
+.faqSection{
+    /* border: 2px solid red; */
+    color: white;
+}
+
+.carouselSection h2,
+.reasonToJoinSection h2,
+.faqSection h2{
+    /* border: 2px solid red; */
+    margin-left: 5rem;
+    font-size: 2.5rem;
+}
+
+.carouselCardContainer,
+.plansContainer,
+.faqCardsContainer{
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}
+
+.carouselCard{
+    width: 12%;
+    /* border: 2px solid yellow; */
+    height: 30vh;
+    border-radius: 20px;
+    position: relative;
+    margin: 0rem 1rem;
+}
+
+.carouselNumberContainer{
+    /* border: 2px solid red; */
+    position: absolute;
+    left: -15%;
+}
+
+.carouselNumberContainer span{
+    font-weight: 900;
+    color: rgba(0,0,0,0.8);
+    -webkit-text-stroke: 0.125rem rgb(255,255,255);
+    text-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
+    font-size: 4rem;
+}
+
+.carouselImageContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.carouselImageContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.planSection h2{
+    /* border: 2px solid red; */
+    margin-left: 5rem;
+    font-size: 1.8rem;
+    padding-top: 0.5rem;
+}
+
+.planCard{
+    /* border: 2px solid green; */
+    height: 32vh;
+    width: 23%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem 1rem 1rem;
+    border-radius: 20px;
+    position: relative;
+    border: 1.5px solid rgba(255, 255, 255, 0.177);
+}
+
+.planCard1{
+    background: linear-gradient(149deg, #1c4072 6.96%, #172b47 40.17%, #120c1f 73.39%);
+}
+
+.planCard2{
+    background: linear-gradient(149deg,#1C4072 6.96%,#172B47 40.17%,#120c1f 73.39%);
+}
+
+.planCard2RightContent{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.5rem;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 20px;
+}
+
+.planCard3{
+    background: linear-gradient(
+149deg,#59216E 6.96%,#251743 40.17%,#120c1f 73.39%);
+}
+
+.planCard4{
+    background: linear-gradient(
+149deg,#6C1E41 6.96%,#251743 40.17%,#120c1f 73.39%);
+}
+
+.planCard h2{
+    margin-left: 0;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.planCard h4{
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.planCard p{
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.reasonsContainer{
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}
+
+.reasonCard{
+    background: rgb(43,43,43) ;
+    border: 1.5px solid rgba(255, 255, 255, 0.114);
+    height: 30vh;
+    width: 23%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem 1rem 1rem;
+    border-radius: 20px;
+    position: relative;
+}
+
+.reasonCard h3{
+    padding-bottom: 1rem;
+}
+
+.reasonCard p{
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    padding-bottom: 2rem;
+}
+
+.reasonCard svg{
+    font-size: .5rem;
+    height: 50px;
+    width: 50px;
+    margin-left: 190px;
+}
+
+.faqCard{
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+.faqQuestion,
+.faqAnswer{
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #2e2e2e;
+    border: 1.5px solid rgba(255, 255, 255, 0.114);
+}
+
+.faqQuestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faqQuestion span{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.faqAnswer{
+    display: none;
+}
+
+.faqQuestion:hover{
+    cursor: pointer;
+    background: rgba(101, 100, 100, 0.645);
+}
+
+.faqCard:hover .faqAnswer{
+    display: block;
+    cursor: pointer;
+}
+
+.faqCardsContainer{
+    flex-direction: column;
+}
+
+.getStartedSection{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.getStartedSection p{
+    margin-bottom: 2rem;
+}
+
+.footer{
+    height: 20%;
+}
+
+/* For Large Tablets (1200px and below)*/
+@media (max-width: 1200px) {
+    .menuList {
+        width: 50%;
+    }
+    .carouselCard {
+        width: 20%;
+    }
+    .planCard, .reasonCard {
+        width: 45%;
+        margin: 1rem;
+    }
+}
+
+/* For Tablets (768px and below) */
+@media (max-width: 768px) {
+    .menuList {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .carouselCard {
+        width: 40%;
+    }
+    .planCard, .reasonCard {
+        width: 90%;
+    }
+    .bannerContainer h2 {
+        font-size: 3rem;
+        width: 80%;
+    }
+    .inputContainer {
+        flex-direction: column;
+        width: 80%;
+    }
+    .emailInputBox, .getStartedButton {
+        width: 100%;
+    }
+    .emailInputBox {
+        margin-bottom: 1rem;
+    }
+}
+
+/* For Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+    .carouselCard {
+        width: 80%;
+    }
+    .bannerContainer h2 {
+        font-size: 2rem;
+    }
+    .bannerContainer p, .bannerContainer h4 {
+        font-size: 0.9rem;
+    }
+    .carouselCard span {
+        font-size: 3rem;
+    }
+} 
