@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NeuroScan AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="container">
+    <h1>NeuroScan AI</h1>
+    <p class="subtitle">Multilingual Psychological Behavior Analyzer</p>
+
+    <textarea id="inputText" placeholder="Paste chat message or paragraph here..."></textarea>
+
+    <button id="analyzeBtn">Analyze Behavior</button>
+
+    <div class="loader" id="loader"></div>
+
+    <div class="result" id="result">
+        <div class="score-section">
+            <div class="score-circle" id="scoreCircle">
+                <span id="riskScore">0</span>
+                <small>%</small>
+            </div>
+            <div class="risk-label" id="riskLabel"></div>
+        </div>
+
+        <div class="details">
+            <p><strong>Detected Language:</strong> <span id="language"></span></p>
+            <p><strong>Manipulation Type:</strong> <span id="manipulation"></span></p>
+            <p><strong>Emotional Tone:</strong> <span id="tone"></span></p>
+        </div>
+
+        <div class="analysis-box">
+            <h3>AI Explanation</h3>
+            <p id="explanation"></p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
